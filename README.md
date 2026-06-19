@@ -35,7 +35,7 @@ An end-to-end EDA + ML modeling project on a dataset of **32,648 used bike listi
 
 **Personal motivation:** I built this while actively shopping for my own second-hand bike. Rather than relying on gut feeling or dealer quotes, I wanted a data-backed sense of what factors actually drive resale price in the Indian market — brand depreciation curves, the real impact of kms driven vs age, and how much ownership history (First Owner vs Second Owner+) actually costs you. The model ended up directly informing what I was willing to pay for specific brand/age/kms combinations.
 
-- ✅ **Data Cleaning** — rare city consolidation, duplicate removal (25,329 duplicate rows found and dropped)
+- ✅ **Data Cleaning** — rare city consolidation, exact duplicate removal
 - ✅ **EDA** — univariate, bivariate, and multivariate analysis across price, age, brand, and power
 - ✅ **Encoding** — `ColumnTransformer` combining OneHotEncoder (brand, city) + OrdinalEncoder (owner)
 - ✅ **Model Benchmarking** — 12 regression models trained and evaluated on train and test sets
@@ -54,7 +54,7 @@ An end-to-end EDA + ML modeling project on a dataset of **32,648 used bike listi
                          ▼
 ┌──────────────────────────────────────────────────────────────┐
 │                      DATA CLEANING                           │
-│  Drop bike_name · Rare city → "Other" · Remove 25,329 dupes  │
+│  Drop bike_name · Rare city → "Other" · Remove duplicates     │
 └────────────────────────┬─────────────────────────────────────┘
                          │
                          ▼
@@ -99,7 +99,7 @@ An end-to-end EDA + ML modeling project on a dataset of **32,648 used bike listi
 |---|---|
 | Dropped `bike_name` | High-cardinality text field, not used as a model feature |
 | Rare city consolidation | Cities with ≤5 listings grouped into `"Other"` — prevents one-hot explosion across 93+ cities |
-| Duplicate removal | **25,329 duplicate rows** identified and dropped — nearly 78% of the raw dataset was duplicated listings |
+| Duplicate removal | Exact duplicate rows identified and removed to prevent the model from over-weighting repeated listings |
 | Missing values | None found — `df.isnull().sum()` returned 0 across all columns |
 
 ---
