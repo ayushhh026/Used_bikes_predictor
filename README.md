@@ -337,6 +337,12 @@ The 12 models disagree wildly — from ₹54,500 (SVR) to ₹2,08,952 (Linear Re
 
 **Takeaway for negotiation:** Using Gradient Boosting's ₹1,04,725 as the anchor, anything a seller asks meaningfully above ₹1.1L for this exact spec is worth pushing back on with this data.
 
+### Real-World Validation
+
+My actual all-in cost on this bike: **₹80,000 purchase price + ₹40,000 in repairs ≈ ₹1,20,000 total**.
+
+Gradient Boosting's prediction of **₹1,04,725** lands close to this — within ~13% of my real total cost, and meaningfully closer than any of the other 11 models. This is a useful sanity check: the model isn't just statistically the best generalizer on the test set, it also holds up against a real lived cost I can independently verify. It reinforces that trusting the model with the best train-test gap over the model with the highest raw training score was the right call.
+
 ---
 
 ## Roadmap
