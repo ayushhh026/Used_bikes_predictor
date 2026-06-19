@@ -263,7 +263,7 @@ pip install -r requirements.txt
 
 ### 3. Run the notebook
 ```bash
-jupyter notebook notebooks/used_bikes_eda_modeling.ipynb
+jupyter notebook eda.ipynb
 ```
 
 ---
