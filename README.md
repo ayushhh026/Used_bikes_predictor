@@ -109,28 +109,27 @@ An end-to-end EDA + ML modeling project on a dataset of **32,648 used bike listi
 ### Univariate — Price Distribution
 Price is heavily right-skewed — most bikes sell in the ₹20,000–₹80,000 range, with a long tail toward premium bikes (Triumph, Royal Enfield, Harley-Davidson) reaching ₹19 lakh+.
 
-![Price Distribution](ADD_PRICE_DISTRIBUTION_SS_URL)
+<img width="580" height="432" alt="f2842455-af4a-4c38-9cf4-64388414e864" src="https://github.com/user-attachments/assets/3cadc5df-c01f-4441-82ab-c36da55a92ea" />
 
 ### Univariate — Age Distribution
 Most listed bikes are **6–7 years old** on average (`mean age ≈ 6.66 years`), consistent with typical resale timing in the Indian two-wheeler market.
 
-![Age Distribution](ADD_AGE_DISTRIBUTION_SS_URL)
+<img width="580" height="432" alt="57e10c8f-9b65-47dc-8207-5905087ff500" src="https://github.com/user-attachments/assets/0177074d-4d84-4cec-9151-492ab533be7d" />
 
 ### Bivariate — Age vs Price
 Clear negative relationship — price drops as bike age increases, as expected for depreciating assets.
 
-![Age vs Price](ADD_AGE_VS_PRICE_SS_URL)
+<img width="597" height="432" alt="ca5ae009-7ce2-4761-8777-ce79ae441ed6" src="https://github.com/user-attachments/assets/e937a1d4-23ab-4b55-a509-90712f40ab98" />
 
 ### Bivariate — Brand vs Price
 Boxplot across brands reveals wide price variance — premium brands (Triumph, Harley-Davidson, Ducati, BMW) sit far above mass-market brands (Hero, TVS, Bajaj) in both median and spread.
 
-![Brand vs Price](ADD_BRAND_VS_PRICE_SS_URL)
+<img width="1242" height="848" alt="44a52312-549f-44b7-978c-6cbc313272dc" src="https://github.com/user-attachments/assets/92c0c1e8-e15b-46f8-bd2a-efa65c9efb84" />
 
 ### Multivariate — Correlation Heatmap
 `power` shows the strongest numeric correlation with `price` — intuitive, since engine displacement is a major price driver. The correlation is moderate rather than strong, since brand and ownership history also weigh heavily on price (and aren't numeric).
 
-![Correlation Heatmap](ADD_HEATMAP_SS_URL)
-
+<img width="527" height="418" alt="17572a61-e6db-4a77-9473-55e5046ecb6f" src="https://github.com/user-attachments/assets/cc41f159-0715-4550-b956-1a4a207e3fa1" />
 ---
 
 ## Encoding Strategy
